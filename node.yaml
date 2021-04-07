@@ -1,0 +1,15 @@
+kind: Pod
+metadata:
+  name: node
+spec:
+  containers:
+  - command:
+    image: leonardosartorello/node_autentica
+    name: node_autentica
+    ports:
+    - containerPort: 3000
+      hostPort: 3000
+  - command:
+    image: redis
+    name: redis
+
